@@ -1,7 +1,7 @@
 fetch("https://jsonplaceholder.typicode.com/todos")
 .then(response => response.json())
-.then(json => {
-   const completedTodo = json.reduce((acc, todo) => {
+.then(todo => {
+   const completedTodo = todo.reduce((acc, todo) => {
     return todo.completed ? acc+1 : acc}, 0)
     console.log(completedTodo)
 })
